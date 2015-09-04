@@ -1,0 +1,32 @@
+name: Hub
+author: NullChips
+main: me.nullchips.hub.Hub
+version: 1.0
+
+commands:
+    spawn:
+        description: Teleports the player to spawn.
+        aliases: [lobby, hub]
+    setspawn:
+        description: Sets the spawn location.
+    hubreload:
+        description: Reloads the config for the hub plugin.
+    togglehubprotection:
+        description: Turns the hub protection on and off.
+        
+permissions:
+    hub.reload:
+        description: Reload the hub config.
+        default: op
+    hub.setspawn:
+        description: Set the spawn for the hub.
+        default: op
+    hub.toggleprotection:
+        description: Toggles the hub protection on and off.
+        default: op
+    hub.build:
+        description: The ability to break and place blocks in the hub.
+        default: op
+    hub.editinventory:
+        description: Re-arrange and drop items in the hub.
+        default: op
