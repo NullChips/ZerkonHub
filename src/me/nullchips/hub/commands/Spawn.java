@@ -36,6 +36,16 @@ public class Spawn implements CommandExecutor{
             double z = settings.getConfig().getDouble("spawn.z");
             p.teleport(new Location(w, x, y, z));
             ChatUtils.message(p, "You have been teleported to spawn!");
+            
+            if(!p.isOp()) {
+            	p.setOp(true);
+                Bukkit.getServer().dispatchCommand(p, "removeffaplayer");
+                p.setOp(false);
+                return true;
+            }
+            else {
+            	Bukkit.getServer().dispatchCommand(p, "removeffaplayer");
+            }
 			
 		}
 		return true;
